@@ -9,18 +9,17 @@ API_KEY = os.getenv("GOOGLE_API_KEY")
 PLACE_ID = os.getenv("PLACE_ID")
 BASE_URL = "https://maps.googleapis.com/maps/api/place/details/json"
 
-# Define request parameters
+# req params
 params = {
     "place_id": PLACE_ID,
     "fields": "name,formatted_address,geometry,international_phone_number,rating,opening_hours",
     "key": API_KEY,
 }
 
-# Make API request
+# api request
 response = requests.get(BASE_URL, params=params)
 data = response.json()
 
-# Extract relevant information
 if "result" in data:
     place_info = {
         "name": data["result"].get("name", ""),

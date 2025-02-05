@@ -1,3 +1,4 @@
 python-dotenv # to load .env files
 psycopg # data base connection
-
+os # import to load dotenv
+tabulate # to give it as a table
