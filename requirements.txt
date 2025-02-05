@@ -1,0 +1,3 @@
+python-dotenv # to load .env files
+psycopg # data base connection
+
